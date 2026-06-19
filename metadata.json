@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio Neo-Brutalis",
+  "description": "Portofolio interaktif dengan desain Neo-Brutalis yang modern, modular, dan dinamis menggunakan React, Tailwind CSS, dan Framer Motion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
