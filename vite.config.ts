@@ -4,14 +4,13 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Menangani __dirname di modul ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-    // 1. PENTING: base: './' memastikan path aset (JS/CSS) bersifat relatif
-    // sehingga tidak error 404 saat di-deploy
+    // base: './' adalah kunci agar aplikasi mencari file aset relatif 
+    // terhadap lokasi index.html, sangat krusial untuk hosting statis.
     base: './', 
     
     plugins: [
@@ -30,10 +29,11 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
     
-    // 2. Opsi tambahan untuk memastikan build lebih stabil
     build: {
       outDir: 'dist',
       sourcemap: false,
+      // Memastikan aset (gambar/font) tidak dipindahkan ke path yang salah
+      assetsDir: 'assets',
     }
   };
 });
