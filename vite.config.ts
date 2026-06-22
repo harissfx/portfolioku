@@ -9,9 +9,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-    // KUNCI PERBAIKAN: Gunakan './' agar aplikasi mencari aset 
-    // relatif terhadap file index.html, bukan dari root domain.
-    base: './', 
+    // KUNCI UTAMA: Base path harus sesuai dengan nama repository
+    base: '/portfolioku/', 
     
     plugins: [
       react(), 
