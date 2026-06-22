@@ -28,7 +28,7 @@ export default function WorkSection() {
       title: 'Desain 3D Modeling',
       category: 'Blender • Fusion 360 • CAD',
       color: 'bg-brutal-pink',
-      image: './3d-modeling.jpg',
+      image: '/portfolioku/3d-modeling.jpg',
       link: '#',
       gridClass: 'lg:col-span-8 col-span-1',
       detail: {
@@ -48,7 +48,7 @@ export default function WorkSection() {
       title: 'Desain PCB',
       category: 'EasyEDA • KiCad • Schematic',
       color: 'bg-brutal-yellow',
-      image: './pcb-design.jpg',
+      image: '/portfolioku/pcb-design.jpg',
       link: '#',
       gridClass: 'lg:col-span-4 col-span-1',
       detail: {
@@ -68,7 +68,7 @@ export default function WorkSection() {
       title: 'Website & Dashboard IoT',
       category: 'React • Node.js • WebServer IoT',
       color: 'bg-sky-500',
-      image: './dashboard-iot.jpg',
+      image: '/portfolioku/dashboard-iot.jpg',
       link: '#',
       gridClass: 'lg:col-span-5 col-span-1',
       detail: {
@@ -88,7 +88,7 @@ export default function WorkSection() {
       title: 'Bikin APK Custom',
       category: 'Android • MIT App Inventor • IoT UI',
       color: 'bg-amber-500',
-      image: './custom-apk.jpg',
+      image: '/portfolioku/custom-apk.jpg',
       link: '#',
       gridClass: 'lg:col-span-7 col-span-1',
       detail: {
