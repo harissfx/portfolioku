@@ -9,8 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-    // base: './' adalah kunci agar aplikasi mencari file aset relatif 
-    // terhadap lokasi index.html, sangat krusial untuk hosting statis.
+
     base: './', 
     
     plugins: [
@@ -32,7 +31,6 @@ export default defineConfig(() => {
     build: {
       outDir: 'dist',
       sourcemap: false,
-      // Memastikan aset (gambar/font) tidak dipindahkan ke path yang salah
       assetsDir: 'assets',
     }
   };
