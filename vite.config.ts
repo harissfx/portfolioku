@@ -9,7 +9,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-
+    // base: './' memastikan path aset bersifat relatif, 
+    // ini kunci agar website tidak putih saat di-deploy
     base: './', 
     
     plugins: [
@@ -23,15 +24,8 @@ export default defineConfig(() => {
       },
     },
     
-    server: {
-      hmr: process.env.DISABLE_HMR !== 'true',
-      watch: process.env.DISABLE_HMR === 'true' ? null : {},
-    },
-    
     build: {
-      outDir: 'dist',
-      sourcemap: false,
-      assetsDir: 'assets',
+      outDir: 'dist', // Pastikan Vercel membaca folder ini
     }
   };
 });
