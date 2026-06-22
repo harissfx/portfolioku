@@ -2,4 +2,3 @@ node_modules/
 build/
 dist/
 .vercel
-package-lock.json
