@@ -9,9 +9,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-    // Gunakan './' agar path aset selalu relatif terhadap index.html,
-    // ini adalah cara paling aman untuk berbagai environment hosting.
-    base: './', 
+    // Gunakan jalur ini agar aset terbaca dengan benar di GitHub Pages
+    base: '/portfolioku/', 
     
     plugins: [
       react(), 
@@ -26,7 +25,6 @@ export default defineConfig(() => {
     
     build: {
       outDir: 'dist',
-      assetsDir: 'assets',
     }
   };
 });
