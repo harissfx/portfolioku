@@ -121,7 +121,7 @@ export default function Hero() {
         }}
         className="absolute top-26 right-4 md:right-16 z-30 bg-brutal-pink border-3 border-brutal-dark text-white px-4 py-2 font-mono font-black uppercase text-xs tracking-widest shadow-[4px_4px_0px_0px_#111111] rotate-[-6deg] select-none cursor-grab active:cursor-grabbing hidden sm:block"
       >
-        <span className="inline-block animate-bounce mr-1">✊</span> Geser Aku!
+        <span className="inline-block animate-bounce mr-1">✊</span> Haris Pemula
       </motion.div>
 
       {/* Left Column (Content) */}
