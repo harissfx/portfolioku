@@ -3,7 +3,7 @@
 My personal portfolio — a space where I showcase who I am, what I build, and how I think as a developer.
 
 ## 🌐 Live
-https://harissfx.github.io/portfolioku
+https://harissfx.is-a.dev/
 
 ## ⚙️ Built With
 - React 19 + TypeScript
