@@ -21,7 +21,7 @@ export default function ContactSection() {
 </p>
 
         <motion.a
-          href="mailto:email@anda.com"
+          href="mailto:harissyc65@gmail.com"
           whileHover={{
             scale: 1.05,
             rotate: 1.5,
@@ -33,7 +33,7 @@ export default function ContactSection() {
           transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           className="btn-mega inline-block text-lg sm:text-xl md:text-3xl font-black uppercase tracking-wider text-white bg-brutal-pink px-8 py-5 md:px-12 md:py-7 border-3 border-brutal-dark shadow-[8px_8px_0_0_#111111] select-none cursor-pointer max-w-full word-break break-all relative group"
         >
-          email@anda.com{' '}
+          harissyc65@gmail.com{' '}
           <motion.span
             animate={{ y: [0, -4, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}

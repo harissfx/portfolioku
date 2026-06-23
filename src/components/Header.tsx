@@ -131,7 +131,7 @@ export default function Header() {
           Hubungi
         </button>
         <a
-          href="mailto:email@anda.com"
+          href="mailto:harissyc65@gmail.com"
           className="px-6 py-3 bg-brutal-pink text-white border-3 border-brutal-dark shadow-[6px_6px_0_0_#111111] hover:shadow-[4px_4px_0_0_#111111] active:translate-x-1 active:translate-y-1 active:shadow-none text-xl font-bold uppercase tracking-wider select-none"
         >
           Email ↗
