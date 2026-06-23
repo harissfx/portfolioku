@@ -2,7 +2,7 @@ export default function Footer() {
   const socials = [
     { name: 'GitHub', link: 'https://github.com/harissfx' },
     { name: 'LinkedIn', link: 'https://linkedin.com/in/haris-syc' },
-    { name: 'Instagram', link: 'https://instagram.com/haris_sfx77' },
+    { name: 'X', link: 'https://x.com/HarisSfx' },
   ];
 
   return (
