@@ -86,7 +86,7 @@ export default function WorkSection() {
     {
       id: 'proj4',
       title: 'Bikin APK Custom',
-      category: 'Android • MIT App Inventor • IoT UI',
+      category: 'Android • MIT App Inventor • Flutter • IoT UI',
       color: 'bg-amber-500',
       image: '/images/custom-apk.jpg',
       link: '#',
