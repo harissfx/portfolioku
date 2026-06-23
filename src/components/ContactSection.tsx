@@ -43,23 +43,6 @@ export default function ContactSection() {
           </motion.span>
         </motion.a>
         <div className="flex gap-4 mt-6 flex-wrap justify-center">
-  <a
-    href="https://wa.me/6285124014109"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-mono text-sm border-2 border-brutal-dark px-4 py-2 font-bold"
-  >
-    WHATSAPP
-  </a>
-
-  <a
-    href="https://github.com/harissfx"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-mono text-sm border-2 border-brutal-dark px-4 py-2 font-bold"
-  >
-    GITHUB
-  </a>
 </div>
       </motion.div>
     </section>
