@@ -120,7 +120,6 @@ export default function WorkSection() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when modal open
   useEffect(() => {
     if (activeProject) {
       document.body.style.overflow = 'hidden';

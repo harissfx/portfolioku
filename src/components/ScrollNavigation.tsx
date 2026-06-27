@@ -14,11 +14,9 @@ export default function ScrollNavigation() {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       
-      // 1. Calculate scroll percent
       const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       setScrollPercent(percent);
 
-      // 2. Determine active section based on scroll offset
       const sections = [
         { id: 'hero', index: 'hero' },
         { id: 'work', index: 'work' },
@@ -31,7 +29,6 @@ export default function ScrollNavigation() {
         const el = document.getElementById(sec.id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          // If the section is around the center or upper half of viewport, it's active
           if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
             currentActiveIndex = sec.index as 'hero' | 'work' | 'about' | 'contact';
             break;
@@ -40,7 +37,6 @@ export default function ScrollNavigation() {
       }
       setActiveSection(currentActiveIndex);
 
-      // 3. Show/hide scroll direction arrow
       const delta = Math.abs(scrollTop - lastScrollY);
       if (delta > 10) {
         setArrowVisible(true);
@@ -56,7 +52,6 @@ export default function ScrollNavigation() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Trigger initially
     handleScroll();
 
     return () => {

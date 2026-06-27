@@ -6,7 +6,6 @@ export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if device supports hover (desktop) & screen width
     const mql = window.matchMedia('(hover: hover) and (min-width: 901px)');
     const checkVisibility = () => {
       setIsVisible(mql.matches);

@@ -24,7 +24,6 @@ const lines = [
 
   useEffect(() => {
     if (currentLineIndex >= lines.length) {
-      // Loop reset
       const resetTimeout = setTimeout(() => {
         setVisibleText([]);
         setCurrentLineIndex(0);
@@ -46,13 +45,13 @@ const lines = [
           return next;
         });
         setCurrentCharIndex((prev) => prev + 1);
-      }, 40); // speed
+      }, 40);
       return () => clearTimeout(charTimeout);
     } else {
       const lineTimeout = setTimeout(() => {
         setCurrentLineIndex((prev) => prev + 1);
         setCurrentCharIndex(0);
-      }, 600); // delay between lines
+      }, 600);
       return () => clearTimeout(lineTimeout);
     }
   }, [currentLineIndex, currentCharIndex]);

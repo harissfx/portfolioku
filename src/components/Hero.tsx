@@ -14,7 +14,6 @@ function StatCounter({ endValue, label, delay = 0 }: { endValue: number; label: 
         const entry = entries[0];
         if (entry.isIntersecting && !hasRun) {
           setHasRun(true);
-          // Wait for delayed entry animation to start counting
           setTimeout(() => {
             let start = 0;
             const duration = 1200;
