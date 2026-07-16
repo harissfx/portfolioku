@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -24,6 +26,9 @@ export default function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     document.body.style.overflow = !isOpen ? 'hidden' : '';
+    if (isOpen) {
+      setIsContactOpen(false);
+    }
   };
 
   const scrollToComponent = (id: string) => {
@@ -124,18 +129,48 @@ export default function Header() {
         >
           Tentang
         </button>
-        <button
-          onClick={() => scrollToComponent('contact')}
-          className="text-3xl md:text-4xl font-black uppercase text-brutal-dark hover:text-brutal-pink transition-colors cursor-pointer select-none"
-        >
-          Hubungi
-        </button>
-        <a
-          href="mailto:harissyc65@gmail.com"
-          className="px-6 py-3 bg-brutal-pink text-white border-3 border-brutal-dark shadow-[6px_6px_0_0_#111111] hover:shadow-[4px_4px_0_0_#111111] active:translate-x-1 active:translate-y-1 active:shadow-none text-xl font-bold uppercase tracking-wider select-none"
-        >
-          Email ↗
-        </a>
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => setIsContactOpen((prev) => !prev)}
+            className="inline-flex items-center gap-3 text-3xl md:text-4xl font-black uppercase text-brutal-dark hover:text-brutal-pink transition-colors cursor-pointer select-none"
+          >
+            Hubungi
+            <motion.span
+              animate={{ rotate: isContactOpen ? 45 : 0 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+              className="inline-block text-2xl md:text-3xl leading-none"
+            >
+              +
+            </motion.span>
+          </button>
+
+          <AnimatePresence>
+            {isContactOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -12, scale: 0.95, height: 0 }}
+                animate={{ opacity: 1, y: 0, scale: 1, height: 'auto' }}
+                exit={{ opacity: 0, y: -12, scale: 0.95, height: 0 }}
+                transition={{ type: 'spring', duration: 0.4, bounce: 0.25 }}
+                className="flex gap-4 flex-wrap justify-center mt-6 overflow-hidden"
+              >
+                <a
+                  href="mailto:harissyc65@gmail.com"
+                  className="px-6 py-3 bg-brutal-pink text-white border-3 border-brutal-dark shadow-[6px_6px_0_0_#111111] hover:shadow-[4px_4px_0_0_#111111] active:translate-x-1 active:translate-y-1 active:shadow-none text-lg md:text-xl font-bold uppercase tracking-wider select-none"
+                >
+                  Email ↗
+                </a>
+                <a
+                  href="https://t.me/HanzOfc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white text-brutal-dark border-3 border-brutal-dark shadow-[6px_6px_0_0_#111111] hover:shadow-[4px_4px_0_0_#111111] active:translate-x-1 active:translate-y-1 active:shadow-none text-lg md:text-xl font-bold uppercase tracking-wider select-none"
+                >
+                  Telegram ↗
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         <div className="absolute bottom-8 text-center font-mono text-xs text-brutal-dark/60 select-none">
           <p>© 2026 Haris Syc. Semua hak dilindungi.</p>

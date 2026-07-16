@@ -1,6 +1,37 @@
 import { motion } from 'motion/react';
+import { Github, Linkedin, Twitter, Send } from 'lucide-react';
 
 export default function AboutSection() {
+  const socials = [
+    { name: 'GitHub', link: 'https://github.com/harissfx', icon: Github },
+    { name: 'LinkedIn', link: 'https://linkedin.com/in/haris-syc', icon: Linkedin },
+    { name: 'X', link: 'https://x.com/HarisSfx', icon: Twitter },
+    { name: 'Telegram', link: 'https://t.me/HanzOfc', icon: Send },
+  ];
+
+  const socialContainerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const socialItemVariants = {
+    hidden: { y: 30, scale: 0.5, opacity: 0 },
+    show: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 0.6,
+      },
+    },
+  };
+
   const skills = [
     '3D Modeling & Design',
     'Blender',
@@ -99,6 +130,52 @@ export default function AboutSection() {
               masalah nyata.
             </p>
           </div>
+
+          <motion.h3
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+            }}
+            className="font-mono text-xs text-brutal-yellow font-black uppercase tracking-wider mt-10 mb-5 select-none"
+          >
+            // TERHUBUNG DENGAN SAYA
+          </motion.h3>
+
+          <motion.div
+            variants={socialContainerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex gap-3.5"
+          >
+            {socials.map((social) => {
+              const Icon = social.icon;
+              return (
+                <motion.a
+                  key={social.name}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  variants={socialItemVariants}
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: -6,
+                    backgroundColor: '#d4ff00',
+                    color: '#111111',
+                    boxShadow: '4px 4px 0px 0px #d4ff00',
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 flex items-center justify-center border-2 border-brutal-yellow text-brutal-yellow transition-colors duration-200 select-none cursor-pointer"
+                >
+                  <Icon size={20} strokeWidth={2.5} />
+                </motion.a>
+              );
+            })}
+          </motion.div>
         </motion.div>
 
         {/* Right Column */}
