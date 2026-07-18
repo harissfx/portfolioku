@@ -1,11 +1,11 @@
 export default function Marquee() {
   const words = [
-    'UI/UX DESIGN',
-    'FRONTEND DEVELOPMENT',
-    'CREATIVE CODING',
+    'IOT & EMBEDDED SYSTEMS',
+    'PCB DESIGN',
+    '3D MODELING',
+    'ESP32 / ARDUINO',
+    'IOT DASHBOARD',
     'BRUTALIST WEB',
-    'REACT WORKFLOWS',
-    'NEXT.JS STRUCTURES',
   ];
 
   const repeatedText = words.join(' • ') + ' • ';
